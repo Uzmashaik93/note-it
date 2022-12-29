@@ -3,7 +3,6 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import {signInWithEmailAndPassword} from "firebase/auth";
 import {firebaseAuth} from "../firebase-config";
-import { useAuth } from "./auth";
 import { useNavigate } from "react-router-dom";
 
 
@@ -11,7 +10,9 @@ const Login  = () => {
 
   const [loginEmail,setLoginEmail] = useState("");
   const [loginPassword,setLoginPassword] = useState("");
-  const authContext = useAuth();
+
+
+
   const navigate = useNavigate();
 
 
@@ -23,7 +24,8 @@ const Login  = () => {
           loginEmail,
           loginPassword
         );
-        authContext.login(user);
+        console.log(user);
+        
         navigate("/home");
 
       } catch (error) {

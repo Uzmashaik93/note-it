@@ -1,12 +1,21 @@
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword   } from "firebase/auth";
+import { Navigate } from "react-router-dom";
+import {useAuth} from "./auth";
 import { firebaseAuth } from "../firebase-config";
+
 
 const Register = () => {
   const [registerEmail, setRegisterEmail] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
+
+  const authContext = useAuth();
+  
+  if(authContext.user !== null && authContext.user !== undefined){
+    return <Navigate to="/home" />
+  }
 
   const registerClick = () => {
     (async () => {
