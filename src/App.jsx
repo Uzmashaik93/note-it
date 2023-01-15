@@ -1,4 +1,6 @@
 import React from "react";
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -27,6 +29,7 @@ function App() {
         </Routes>
       </BrowserRouter>
       <Footer />
+      <ToastContainer />
     </AuthProvider>
   );
 }

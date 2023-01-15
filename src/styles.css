@@ -103,9 +103,16 @@ border: #33313B;
   align-items: center;
 }
 
+.profileCard{
+  width: 18rem;
+  margin:5% auto;
+
+  
+}
+
 .profile{
-  height: 100px;
-  margin-top: 50px;  
+  height: 280px;
+  padding: 30px;
 }
 
 .header {

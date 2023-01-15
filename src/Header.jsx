@@ -24,6 +24,10 @@ function Header() {
     navigate("/profile");
   }
 
+  const home = () =>{
+    navigate("/home");
+  }
+
   return (
     <>
       <Navbar className=" header" variant="dark" expand="lg">
@@ -45,6 +49,9 @@ function Header() {
                   menuVariant="light"
                   align="end"
                 >
+                <NavDropdown.Item onClick={home}>
+                    Home
+                  </NavDropdown.Item>
                   <NavDropdown.Item onClick={profileLink}>
                     {authContext.user.email}
                   </NavDropdown.Item>
