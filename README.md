@@ -2,6 +2,23 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Description
+
+This Application was build using ReactJs on Front End and firestore on the backend to store the personalised notes.
+
+## Technologies & Libraries
+
+* ReactJs
+* Html
+* Css
+* Bootstrap
+* mui
+* firebase
+
+## Demo
+
+https://note-it-74fed.web.app
+
 ## Available Scripts
 
 In the project directory, you can run:
